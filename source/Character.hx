@@ -495,6 +495,54 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+
+			case 'way':
+				frames = Paths.getSparrowAtlas('characters/way');
+				animation.addByPrefix('idle', 'way idle', 24, false);
+				animation.addByPrefix('singUP', 'way up', 24, false);
+				animation.addByPrefix('singDOWN', 'way down', 24, false);
+				animation.addByPrefix('singLEFT', 'way left', 24, false);
+				animation.addByPrefix('singRIGHT', 'way right', 24, false);
+		
+				addOffset('idle');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+						
+				playAnim('idle');
+		
+			case 'way-angy':
+				frames = Paths.getSparrowAtlas('characters/wayangy');
+				animation.addByPrefix('idle', 'way idle', 24, false);
+				animation.addByPrefix('singUP', 'way up', 24, false);
+				animation.addByPrefix('singDOWN', 'way down', 24, false);
+				animation.addByPrefix('singLEFT', 'way left', 24, false);
+				animation.addByPrefix('singRIGHT', 'way right', 24, false);
+		
+				addOffset('idle');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+						
+				playAnim('idle');
+	
+			case 'way-mad':
+				frames = Paths.getSparrowAtlas('characters/way3');
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+	
+				addOffset('idle');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+					
+				playAnim('idle');
 		}
 
 		dance();

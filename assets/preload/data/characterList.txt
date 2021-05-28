@@ -1,6 +1,7 @@
 bf
 dad
 gf
+speakers
 spooky
 pico
 mom
@@ -15,3 +16,6 @@ bf-pixel
 senpai
 senpai-angry
 spirit
+way
+way-angy
+way-mad

@@ -122,6 +122,16 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = false;
 
+			case 'speakers':
+				tex = Paths.getSparrowAtlas('characters/GF_speaker_only');
+				frames = tex;
+				animation.addByIndices('danceRight', 'GF Dancing Beat', 24, false);
+				animation.addByIndices('sad', 'gf sad', 24, false);
+				
+				addOffset('danceRight');
+				addOffset('sad');
+
+				playAnim('danceRight');
 			case 'dad':
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST');

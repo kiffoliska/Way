@@ -125,8 +125,8 @@ class Character extends FlxSprite
 			case 'speakers':
 				tex = Paths.getSparrowAtlas('characters/GF_speaker_only');
 				frames = tex;
-				animation.addByIndices('danceRight', 'GF Dancing Beat', 24, false);
-				animation.addByIndices('sad', 'gf sad', 24, false);
+				animation.addByPrefix('danceRight', 'GF Dancing Beat', 24, false);
+				animation.addByPrefix('sad', 'gf sad', 24, false);
 				
 				addOffset('danceRight');
 				addOffset('sad');

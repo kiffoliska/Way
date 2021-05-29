@@ -48,7 +48,7 @@ class Ratings
                 switch(i)
                 {
                     case 0:
-                        ranking += " AAAAA";
+                        ranking += " Always believe!";
                     case 1:
                         ranking += " AAAA:";
                     case 2:
@@ -78,7 +78,7 @@ class Ratings
                     case 14:
                         ranking += " C";
                     case 15:
-                        ranking += " D";
+                        ranking += " No way you're this bad!";
                 }
                 break;
             }

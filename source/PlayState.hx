@@ -3071,9 +3071,13 @@ class PlayState extends MusicBeatState
 	*/
 	function updateAccuracy() 
 		{
+			if (misses > 0 || accuracy < 96)
+				fc = false;
+			else
+				fc = true;
 			totalPlayed += 1;
-			accuracy = Math.max(0,totalNotesHit / totalPlayed * 100);
-			accuracyDefault = Math.max(0, totalNotesHitDefault / totalPlayed * 100);
+			accuracy = totalNotesHit / totalPlayed * 100;
+			accuracyDefault = totalNotesHitDefault / totalPlayed * 100; // isnt part of 1.2 but i have to add this cause funny KE
 		}
 
 

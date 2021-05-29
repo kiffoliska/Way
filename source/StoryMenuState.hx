@@ -23,7 +23,7 @@ class StoryMenuState extends MusicBeatState
 {
 	var scoreText:FlxText;
 
-	var weekData:Array<Dynamic> = [
+	var weekData:Array<Dynamic> = [ //should we remove all the vanilla weeks?
 		['Tutorial'],
 		['Bopeebo', 'Fresh', 'Dad Battle'],
 		['Spookeez', 'South', "Monster"],

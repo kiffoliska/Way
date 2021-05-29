@@ -122,7 +122,7 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = false;
 
-			case 'speakers':
+			case 'speakers': //this was really painful to do, even if i just copied someone's assets
 				tex = Paths.getSparrowAtlas('characters/SPEAKER_assets');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
@@ -197,7 +197,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', "MOM DOWN POSE", 24, false);
 				animation.addByPrefix('singLEFT', 'Mom Left Pose', 24, false);
 				// ANIMATION IS CALLED MOM LEFT POSE BUT ITS FOR THE RIGHT
-				// CUZ DAVE IS DUMB!
+				// CUZ DAVE IS DUMB! YES
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 
 				addOffset('idle');
@@ -526,7 +526,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-			case 'way':
+			case 'way': //way
 				frames = Paths.getSparrowAtlas('characters/way');
 				animation.addByPrefix('idle', 'way idle', 24, false);
 				animation.addByPrefix('singUP', 'way up', 24, false);
@@ -542,7 +542,7 @@ class Character extends FlxSprite
 						
 				playAnim('idle');
 		
-			case 'way-angy':
+			case 'way-angy': //he do be angy
 				frames = Paths.getSparrowAtlas('characters/wayangy');
 				animation.addByPrefix('idle', 'way idle', 24, false);
 				animation.addByPrefix('singUP', 'way up', 24, false);
@@ -558,7 +558,7 @@ class Character extends FlxSprite
 						
 				playAnim('idle');
 	
-			case 'way-mad':
+			case 'way-mad': //grrr mad
 				frames = Paths.getSparrowAtlas('characters/way3');
 				animation.addByPrefix('idle', 'idle', 24, false);
 				animation.addByPrefix('singUP', 'up', 24, false);

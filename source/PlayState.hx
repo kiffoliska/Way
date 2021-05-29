@@ -726,7 +726,7 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-christmas';
 			case 'gf-pixel':
 				gfVersion = 'gf-pixel';
-			case 'speakers':
+			case 'speakers': //i finally realized that i have to it here, cuz i have dumb
 				gfVersion = 'speakers';
 			default:
 				gfVersion = 'gf';

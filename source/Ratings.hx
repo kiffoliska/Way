@@ -48,7 +48,7 @@ class Ratings
                 switch(i)
                 {
                     case 0:
-                        ranking += " fnfbot";
+                        ranking += " AAAAA";
                     case 1:
                         ranking += " AAAA:";
                     case 2:
@@ -78,14 +78,14 @@ class Ratings
                     case 14:
                         ranking += " C";
                     case 15:
-                        ranking += " no Way you are so bad";
+                        ranking += " D";
                 }
                 break;
             }
         }
 
         if (accuracy == 0)
-            ranking = "what";
+            ranking = "N/A";
 		else if(FlxG.save.data.botplay)
 			ranking = "BotPlay";
 

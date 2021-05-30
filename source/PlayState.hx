@@ -1034,6 +1034,14 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'thorns':
 					schoolIntro(doof);
+				case 'way':
+					schoolIntro(doof);
+				case 'always':
+					schoolIntro(doof);
+				case 'no-way':
+					schoolIntro(doof);
+				case 'sussy':
+					schoolIntro(doof);
 				default:
 					startCountdown();
 			}

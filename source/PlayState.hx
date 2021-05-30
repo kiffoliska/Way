@@ -335,6 +335,12 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('roses/rosesDialogue'));
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
+			case 'way':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('way/wayDialogue'));
+			case 'always':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('always/alwaysDialogue'));
+			case 'no-way':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('no-way/no-wayDialogue'));
 		}
 
 		switch(SONG.stage)

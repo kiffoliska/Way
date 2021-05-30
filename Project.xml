@@ -46,6 +46,8 @@
 	<!-- <define name="PRELOAD_ALL" /> -->
 	<define name="PRELOAD_ALL" unless="web" />
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
+
+	<!-- Should be adding "week7" library as Way week? or just preload or shared?-->
 	
 	<section if="PRELOAD_ALL">
 		<library name="songs"    preload="true" />

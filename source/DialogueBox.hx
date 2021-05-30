@@ -88,11 +88,34 @@ class DialogueBox extends FlxSpriteGroup
 				face.setGraphicSize(Std.int(face.width * 6));
 				add(face);
 
-			case 'way': // HAVE TO ADD ALL THE OTHER SONGS AND PUT ALL THE RIGHT TEXT BOXES!
+			// order of songs doesn't matter!
+
+			case 'way':
 				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-pixel');
-				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
-				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByPrefix('normal', 'speech bubble normal', 24, true);
+				// left n right portraits should be changed here, or in another line idfk
+
+			case 'always':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByPrefix('normal', 'speech bubble normal', 24, true);
+				// left n right portraits should be changed here, or in another line idfk
+			
+			case 'sussy':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByPrefix('normal', 'speech bubble normal', 24, true);
+				// left n right portraits should be changed here, or in another line idfk
+
+			case 'no-way':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByPrefix('normal', 'speech bubble normal', 24, true);
 				// left n right portraits should be changed here, or in another line idfk
 		}
 

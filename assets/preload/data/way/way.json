@@ -1,15 +1,15 @@
 {
-    "song": {
-        "player2": "way",
-        "player1": "bf",
-        "stage": "stage",
-        "speed": 1,
-        "needsVoices": false,
-        "sectionLengths": [],
-        "song": "way",
-        "notes": [],
-        "bpm": 130,
-        "sections": 0,
-        "validScore": true
-    }
+  "song": {
+    "player2": "way",
+    "player1": "bf",
+    "stage": "stage",
+    "speed": 1,
+    "needsVoices": true,
+    "sectionLengths": [],
+    "song": "way",
+    "notes": [],
+    "bpm": 130,
+    "sections": 0,
+    "validScore": true
+  }
 }

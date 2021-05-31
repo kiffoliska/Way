@@ -1,5 +1,5 @@
 Tutorial:gf:1
 Way:way:7
 Always:way-angy:7
-Way:way-mad:7
+No-way:way-mad:7
 Sussy:way-mad:7

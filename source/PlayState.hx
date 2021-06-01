@@ -800,8 +800,8 @@ class PlayState extends MusicBeatState
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'MadWayBg':
-				dad.x = -345.3;
-				dad.y = -44.7;
+				/*dad.x = -345.3;
+				dad.y = -44.7;*/
 		}
 
 
@@ -812,10 +812,10 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'MadWayBg':
-				boyfriend.x = 1006.75; //what.
+				/*boyfriend.x = 1006.75; //what.
 				boyfriend.y = 332.4;
 				gf.x = 317.2;
-				gf.y = 52.3;
+				gf.y = 52.3;*/
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;

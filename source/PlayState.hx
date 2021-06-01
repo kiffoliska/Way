@@ -410,7 +410,13 @@ class PlayState extends MusicBeatState
 			}
 			case 'MadWayBg':
 			{
-					curStage = 'MadWayBg';
+					curStage ='MadWayBg'; //im going to try to make it flat
+					var sbg:FlxSprite = new FlxSprite( -677.45, -334.2).loadGraphic(Paths.image('WayBG/bg static', 'shared'));
+					sbg.antialiasing = true;
+					sbg.scrollFactor.set(0.9, 0.9);
+					sbg.active = false;
+					add(sbg);
+					/*curStage = 'MadWayBg';
 					var backBG:FlxSprite = new FlxSprite(-622.5, -311.7);
 					backBG.frames = Paths.getSparrowAtlas('WayBG/back', 'shared');  // should work?
 					backBG.animation.addByPrefix('idle', "bg back", 24, true);
@@ -442,7 +448,7 @@ class PlayState extends MusicBeatState
 					floorBG.antialiasing = true;
 					floorBG.scrollFactor.set(0.9, 0.9);
 					floorBG.active = false;
-					add(floorBG);
+					add(floorBG);*/
 			}
 			case 'limo':
 			{

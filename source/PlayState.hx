@@ -413,17 +413,35 @@ class PlayState extends MusicBeatState
 					curStage = 'MadWayBg';
 					var backBG:FlxSprite = new FlxSprite(-622.5, -311.7);
 					backBG.frames = Paths.getSparrowAtlas('WayBG/back');
+					backBG.animation.addByPrefix('idle', "bg back", 24, true);
+					backBG.updateHitbox();
+					backBG.antialiasing = true;
+					backBG.scrollFactor.set(0.9, 0.9);
+					backBG.active = true;
 					add(backBG);
 
 					var fireBG:FlxSprite = new FlxSprite(-596.7, -38.6);
 					fireBG.frames = Paths.getSparrowAtlas('WayBG/fire');
+					fireBG.animation.addByPrefix('idle', "fire", 24, true);
+					fireBG.updateHitbox();
+					fireBG.antialiasing = true;
+					fireBG.scrollFactor.set(0.9, 0.9);
+					fireBG.active = true;
 					add(fireBG);
 
 					var redBG:FlxSprite = new FlxSprite(-622.5, -311.7);
 					redBG.frames = Paths.getSparrowAtlas('WayBG/red');
+					redBG.animation.addByPrefix('idle', "Symbol 5", 24, true); //im lazy
+					redBG.updateHitbox();
+					redBG.antialiasing = true;
+					redBG.scrollFactor.set(0.9, 0.9);
+					redBG.active = true;
 					add(redBG);
 
 					var floorBG:FlxSprite = new FlxSprite(-596.7, -38.6).loadGraphic(Paths.image('WayBG/floor'));
+					floorBG.antialiasing = true;
+					floorBG.scrollFactor.set(0.9, 0.9);
+					floorBG.active = false;
 					add(floorBG);
 			}
 			case 'limo':
@@ -800,8 +818,8 @@ class PlayState extends MusicBeatState
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'MadWayBg':
-				/*dad.x = -345.3;
-				dad.y = -44.7;*/
+				dad.x = -345.3;
+				dad.y = -44.7;
 		}
 
 
@@ -812,10 +830,10 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'MadWayBg':
-				/*boyfriend.x = 1006.75; //what.
+				boyfriend.x = 1006.75; //what.
 				boyfriend.y = 332.4;
 				gf.x = 317.2;
-				gf.y = 52.3;*/
+				gf.y = 52.3;
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;

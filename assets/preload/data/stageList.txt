@@ -7,4 +7,5 @@ mallEvil
 school
 schoolEvil
 wayBg
+MadWayBg
 sus

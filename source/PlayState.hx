@@ -408,6 +408,24 @@ class PlayState extends MusicBeatState
 					var street:FlxSprite = new FlxSprite(-40, streetBehind.y).loadGraphic(Paths.image('philly/street','week3'));
 					add(street);
 			}
+			case 'MadWayBg':
+			{
+					curStage = 'MadWayBg';
+					var backBG:FlxSprite = new FlxSprite(-622.5, -311.7);
+					backBG.frames = Paths.getSparrowAtlas('WayBG/back');
+					add(backBG);
+
+					var fireBG:FlxSprite = new FlxSprite(-596.7, -38.6);
+					fireBG.frames = Paths.getSparrowAtlas('WayBG/fire');
+					add(fireBG);
+
+					var redBG:FlxSprite = new FlxSprite(-622.5, -311.7);
+					redBG.frames = Paths.getSparrowAtlas('WayBG/red');
+					add(redBG);
+
+					var floorBG:FlxSprite = new FlxSprite(-596.7, -38.6).loadGraphic(Paths.image('WayBG/floor'));
+					add(floorBG);
+			}
 			case 'limo':
 			{
 					curStage = 'limo';
@@ -781,6 +799,9 @@ class PlayState extends MusicBeatState
 				dad.x -= 150;
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'MadWayBg':
+				dad.x = -345.3;
+				dad.y = -44.7;
 		}
 
 
@@ -790,6 +811,11 @@ class PlayState extends MusicBeatState
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
+			case 'MadWayBg':
+				boyfriend.x = 1006.75; //what.
+				boyfriend.y = 332.4;
+				gf.x = 317.2;
+				gf.y = 52.3;
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;

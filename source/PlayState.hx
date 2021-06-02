@@ -410,13 +410,13 @@ class PlayState extends MusicBeatState
 			}
 			case 'MadWayBg':
 			{
-					curStage ='MadWayBg'; //im going to try to make it flat
+					/*curStage ='MadWayBg'; //im going to try to make it flat
 					var sbg:FlxSprite = new FlxSprite( -677.45, -334.2).loadGraphic(Paths.image('WayBG/bg static', 'shared'));
 					sbg.antialiasing = true;
 					sbg.scrollFactor.set(0.9, 0.9);
 					sbg.active = false;
-					add(sbg);
-					/*curStage = 'MadWayBg';
+					add(sbg);*/
+					curStage = 'MadWayBg';
 					var backBG:FlxSprite = new FlxSprite(-622.5, -311.7);
 					backBG.frames = Paths.getSparrowAtlas('WayBG/back', 'shared');  // should work?
 					backBG.animation.addByPrefix('idle', "bg back", 24, true);
@@ -448,7 +448,7 @@ class PlayState extends MusicBeatState
 					floorBG.antialiasing = true;
 					floorBG.scrollFactor.set(0.9, 0.9);
 					floorBG.active = false;
-					add(floorBG);*/
+					add(floorBG);
 			}
 			case 'limo':
 			{
@@ -823,9 +823,9 @@ class PlayState extends MusicBeatState
 				dad.x -= 150;
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'MadWayBg':
+			/*case 'MadWayBg':
 				dad.x = -345.3;
-				dad.y = -44.7;
+				dad.y = -44.7;*/
 		}
 
 
@@ -835,11 +835,11 @@ class PlayState extends MusicBeatState
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
-			case 'MadWayBg':
+			/*case 'MadWayBg':
 				boyfriend.x = 1006.75; //what.
 				boyfriend.y = 332.4;
 				gf.x = 317.2;
-				gf.y = 52.3;
+				gf.y = 52.3;*/
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;

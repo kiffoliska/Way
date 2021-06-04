@@ -408,6 +408,27 @@ class PlayState extends MusicBeatState
 					var street:FlxSprite = new FlxSprite(-40, streetBehind.y).loadGraphic(Paths.image('philly/street','week3'));
 					add(street);
 			}
+			case 'wayBg':
+					curStage = 'wayBg';
+
+					var bak:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('WayBG/wayback', 'shared'));
+					bak.antialiasing = true;
+					bak.scrollFactor.set(0.9, 0.9);
+					bak.active = false;
+					add(bak);
+
+					var cave:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('WayBG/waycave', 'shared'));
+					cave.antialiasing = true;
+					cave.scrollFactor.set(0.8, 0.8);
+					cave.active = false;
+					add(cave);
+
+					var flor:FlxSprite = new FlxSprite( -121.55, 802.8).loadGraphic(Paths.image('WayBG/wayfloor', 'shared'));
+					flor.antialiasing = true;
+					flor.scrollFactor.set(0.9, 0.9);
+					flor.active = false;
+					add(flor);
+					
 			case 'MadWayBg':
 			{
 					/*curStage ='MadWayBg'; //im going to try to make it flat

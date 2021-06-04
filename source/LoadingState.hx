@@ -64,7 +64,12 @@ class LoadingState extends MusicBeatState
 					checkLoadSong(getVocalPath());
 				checkLibrary("shared");
 				if (PlayState.storyWeek > 0)
-					checkLibrary("week" + PlayState.storyWeek);
+					{
+						if  (PlayState.storyWeek == 1)
+							checkLibrary("way");
+						else
+							checkLibrary("week" + PlayState.storyWeek);
+					}
 				else
 					checkLibrary("tutorial");
 				
@@ -152,6 +157,10 @@ class LoadingState extends MusicBeatState
 	static function getNextState(target:FlxState, stopMusic = false):FlxState
 	{
 		Paths.setCurrentLevel("week" + PlayState.storyWeek);
+		if (PlayState.storyWeek == 1)
+			Paths.setCurrentLevel("way");
+		else
+			Paths.setCurrentLevel("week" + PlayState.storyWeek);
 		#if NO_PRELOAD_ALL
 		var loaded = isSoundLoaded(getSongPath())
 			&& (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))

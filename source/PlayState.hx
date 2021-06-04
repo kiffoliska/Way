@@ -411,19 +411,19 @@ class PlayState extends MusicBeatState
 			case 'wayBg':
 					curStage = 'wayBg';
 
-					var bak:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('WayBG/wayback', 'shared'));
+					var bak:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('WayBG/wayback', 'way'));
 					bak.antialiasing = true;
 					bak.scrollFactor.set(0.9, 0.9);
 					bak.active = false;
 					add(bak);
 
-					var cave:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('WayBG/waycave', 'shared'));
+					var cave:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('WayBG/waycave', 'way'));
 					cave.antialiasing = true;
 					cave.scrollFactor.set(0.8, 0.8);
 					cave.active = false;
 					add(cave);
 
-					var flor:FlxSprite = new FlxSprite( -121.55, 802.8).loadGraphic(Paths.image('WayBG/wayfloor', 'shared'));
+					var flor:FlxSprite = new FlxSprite( -121.55, 802.8).loadGraphic(Paths.image('WayBG/wayfloor', 'way'));
 					flor.antialiasing = true;
 					flor.scrollFactor.set(0.9, 0.9);
 					flor.active = false;
@@ -439,7 +439,7 @@ class PlayState extends MusicBeatState
 					add(sbg);*/
 					curStage = 'MadWayBg';
 					var backBG:FlxSprite = new FlxSprite(-622.5, -311.7);
-					backBG.frames = Paths.getSparrowAtlas('WayBG/back', 'shared');  // should work?
+					backBG.frames = Paths.getSparrowAtlas('WayBG/back', 'way');  // should work? //idk
 					backBG.animation.addByPrefix('idle', "bg back", 24, true);
 					backBG.updateHitbox();
 					backBG.antialiasing = true;
@@ -448,7 +448,7 @@ class PlayState extends MusicBeatState
 					add(backBG);
 
 					var fireBG:FlxSprite = new FlxSprite(-596.7, -38.6);
-					fireBG.frames = Paths.getSparrowAtlas('WayBG/fire', 'shared');
+					fireBG.frames = Paths.getSparrowAtlas('WayBG/fire', 'way');
 					fireBG.animation.addByPrefix('idle', "fire", 24, true);
 					fireBG.updateHitbox();
 					fireBG.antialiasing = true;
@@ -457,7 +457,7 @@ class PlayState extends MusicBeatState
 					add(fireBG);
 
 					var redBG:FlxSprite = new FlxSprite(-622.5, -311.7);
-					redBG.frames = Paths.getSparrowAtlas('WayBG/red', 'shared');
+					redBG.frames = Paths.getSparrowAtlas('WayBG/red', 'way');
 					redBG.animation.addByPrefix('idle', "Symbol 5", 24, true); //im lazy
 					redBG.updateHitbox();
 					redBG.antialiasing = true;
@@ -465,7 +465,7 @@ class PlayState extends MusicBeatState
 					redBG.active = true;
 					add(redBG);
 
-					var floorBG:FlxSprite = new FlxSprite(-596.7, -38.6).loadGraphic(Paths.image('WayBG/floor', 'shared'));
+					var floorBG:FlxSprite = new FlxSprite(-596.7, -38.6).loadGraphic(Paths.image('WayBG/floor', 'way'));
 					floorBG.antialiasing = true;
 					floorBG.scrollFactor.set(0.9, 0.9);
 					floorBG.active = false;

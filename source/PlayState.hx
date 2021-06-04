@@ -411,19 +411,19 @@ class PlayState extends MusicBeatState
 			case 'wayBg':
 					curStage = 'wayBg';
 
-					var bak:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('WayBG/wayback', 'way'));
+					var bak:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('wayBg/wayback', 'way'));
 					bak.antialiasing = true;
 					bak.scrollFactor.set(0.9, 0.9);
 					bak.active = false;
 					add(bak);
 
-					var cave:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('WayBG/waycave', 'way'));
+					var cave:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('wayBg/waycave', 'way'));
 					cave.antialiasing = true;
 					cave.scrollFactor.set(0.8, 0.8);
 					cave.active = false;
 					add(cave);
 
-					var flor:FlxSprite = new FlxSprite( -121.55, 802.8).loadGraphic(Paths.image('WayBG/wayfloor', 'way'));
+					var flor:FlxSprite = new FlxSprite( -121.55, 802.8).loadGraphic(Paths.image('wayBg/wayfloor', 'way'));
 					flor.antialiasing = true;
 					flor.scrollFactor.set(0.9, 0.9);
 					flor.active = false;
@@ -431,15 +431,9 @@ class PlayState extends MusicBeatState
 					
 			case 'MadWayBg':
 			{
-					/*curStage ='MadWayBg'; //im going to try to make it flat
-					var sbg:FlxSprite = new FlxSprite( -677.45, -334.2).loadGraphic(Paths.image('WayBG/bg static', 'shared'));
-					sbg.antialiasing = true;
-					sbg.scrollFactor.set(0.9, 0.9);
-					sbg.active = false;
-					add(sbg);*/
 					curStage = 'MadWayBg';
 					var backBG:FlxSprite = new FlxSprite(-622.5, -311.7);
-					backBG.frames = Paths.getSparrowAtlas('WayBG/back', 'way');  // should work? //idk
+					backBG.frames = Paths.getSparrowAtlas('MadWayBg/back', 'way');  // should work? //idk
 					backBG.animation.addByPrefix('idle', "bg back", 24, true);
 					backBG.updateHitbox();
 					backBG.antialiasing = true;
@@ -448,7 +442,7 @@ class PlayState extends MusicBeatState
 					add(backBG);
 
 					var fireBG:FlxSprite = new FlxSprite(-596.7, -38.6);
-					fireBG.frames = Paths.getSparrowAtlas('WayBG/fire', 'way');
+					fireBG.frames = Paths.getSparrowAtlas('MadWayBg/fire', 'way');
 					fireBG.animation.addByPrefix('idle', "fire", 24, true);
 					fireBG.updateHitbox();
 					fireBG.antialiasing = true;
@@ -457,7 +451,7 @@ class PlayState extends MusicBeatState
 					add(fireBG);
 
 					var redBG:FlxSprite = new FlxSprite(-622.5, -311.7);
-					redBG.frames = Paths.getSparrowAtlas('WayBG/red', 'way');
+					redBG.frames = Paths.getSparrowAtlas('MadWayBg/red', 'way');
 					redBG.animation.addByPrefix('idle', "Symbol 5", 24, true); //im lazy
 					redBG.updateHitbox();
 					redBG.antialiasing = true;
@@ -465,7 +459,7 @@ class PlayState extends MusicBeatState
 					redBG.active = true;
 					add(redBG);
 
-					var floorBG:FlxSprite = new FlxSprite(-596.7, -38.6).loadGraphic(Paths.image('WayBG/floor', 'way'));
+					var floorBG:FlxSprite = new FlxSprite(-596.7, -38.6).loadGraphic(Paths.image('MadWayBg/floor', 'way'));
 					floorBG.antialiasing = true;
 					floorBG.scrollFactor.set(0.9, 0.9);
 					floorBG.active = false;
@@ -844,9 +838,12 @@ class PlayState extends MusicBeatState
 				dad.x -= 150;
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			/*case 'MadWayBg':
+			case 'MadWayBg':
 				dad.x = -345.3;
-				dad.y = -44.7;*/
+				dad.y = -44.7;
+			case 'wayBg':
+				dad.x = 112.5;
+				dad.y = 558.3;
 		}
 
 
@@ -856,11 +853,16 @@ class PlayState extends MusicBeatState
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
-			/*case 'MadWayBg':
+			case 'wayBg':
+				boyfriend.x = 1324.9; //wtf
+				boyfriend.y = 537.2;
+				gf.x = 623.85;
+				gf.y = 263.45;
+			case 'MadWayBg':
 				boyfriend.x = 1006.75; //what.
 				boyfriend.y = 332.4;
 				gf.x = 317.2;
-				gf.y = 52.3;*/
+				gf.y = 52.3;
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;

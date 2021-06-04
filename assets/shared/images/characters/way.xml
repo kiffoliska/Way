@@ -2,74 +2,30 @@
 <TextureAtlas imagePath="way.png">
 	<!-- Created with Adobe Animate version 20.5.0.29329 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="way down0000" x="0" y="0" width="617" height="196" pivotX="-141.05" pivotY="-308.05" frameX="0" frameY="-12" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0001" x="0" y="0" width="617" height="196" frameX="0" frameY="-12" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0002" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0003" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0004" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0005" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0006" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0007" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0008" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0009" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0010" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0011" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0012" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way down0013" x="617" y="0" width="610" height="208" frameX="0" frameY="0" frameWidth="617" frameHeight="208"/>
-	<SubTexture name="way idle0000" x="1227" y="0" width="690" height="295" pivotX="-136" pivotY="-258.05" frameX="-4" frameY="0" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0001" x="1227" y="0" width="690" height="295" frameX="-4" frameY="0" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0002" x="0" y="295" width="692" height="277" frameX="-2" frameY="-6" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0003" x="0" y="295" width="692" height="277" frameX="-2" frameY="-6" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0004" x="692" y="295" width="691" height="257" frameX="-1" frameY="-13" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0005" x="692" y="295" width="691" height="257" frameX="-1" frameY="-13" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0006" x="0" y="572" width="687" height="238" frameX="0" frameY="-19" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0007" x="0" y="572" width="687" height="238" frameX="0" frameY="-19" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0008" x="687" y="572" width="681" height="232" frameX="0" frameY="-26" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0009" x="687" y="572" width="681" height="232" frameX="0" frameY="-26" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0010" x="687" y="572" width="681" height="232" frameX="0" frameY="-26" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0011" x="687" y="572" width="681" height="232" frameX="0" frameY="-26" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0012" x="687" y="572" width="681" height="232" frameX="0" frameY="-26" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way idle0013" x="687" y="572" width="681" height="232" frameX="0" frameY="-26" frameWidth="694" frameHeight="295"/>
-	<SubTexture name="way left0000" x="0" y="810" width="716" height="232" pivotX="-70.85" pivotY="-284.05"/>
-	<SubTexture name="way left0001" x="0" y="810" width="716" height="232"/>
-	<SubTexture name="way left0002" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0003" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0004" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0005" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0006" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0007" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0008" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0009" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0010" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0011" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0012" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way left0013" x="716" y="810" width="692" height="232" frameX="-24" frameY="0" frameWidth="716" frameHeight="232"/>
-	<SubTexture name="way right0000" x="1408" y="810" width="612" height="232" pivotX="-160.65" pivotY="-284.05" frameX="-21" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0001" x="1408" y="810" width="612" height="232" frameX="-21" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0002" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0003" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0004" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0005" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0006" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0007" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0008" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0009" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0010" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0011" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0012" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way right0013" x="0" y="1042" width="623" height="232" frameX="0" frameY="0" frameWidth="633" frameHeight="232"/>
-	<SubTexture name="way up0000" x="623" y="1042" width="557" height="318" pivotX="-142.8" pivotY="-198.05" frameX="-18" frameY="0" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0001" x="623" y="1042" width="557" height="318" frameX="-18" frameY="0" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0002" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0003" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0004" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0005" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0006" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0007" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0008" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0009" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0010" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0011" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0012" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
-	<SubTexture name="way up0013" x="1180" y="1042" width="596" height="275" frameX="0" frameY="-43" frameWidth="596" frameHeight="318"/>
+	<SubTexture name="way down0000" x="0" y="0" width="617" height="196" frameX="58" frameY="-400" frameWidth="617" frameHeight="1008"/>
+	<SubTexture name="way down0001" x="0" y="0" width="617" height="196" frameX="58" frameY="-400" frameWidth="617" frameHeight="1008"/>
+	<SubTexture name="way down0002" x="617" y="0" width="610" height="208" frameX="58" frameY="-400" frameWidth="617" frameHeight="1008"/>
+	<SubTexture name="way idle0000" x="1227" y="0" width="690" height="295" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0001" x="1227" y="0" width="690" height="295" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0002" x="0" y="295" width="692" height="277" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0003" x="0" y="295" width="692" height="277" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0004" x="692" y="295" width="691" height="257" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0005" x="692" y="295" width="691" height="257" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0006" x="0" y="572" width="687" height="238" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0007" x="0" y="572" width="687" height="238" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0008" x="687" y="572" width="681" height="232" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0009" x="687" y="572" width="681" height="232" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0010" x="687" y="572" width="681" height="232" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0011" x="687" y="572" width="681" height="232" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0012" x="687" y="572" width="681" height="232" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way idle0013" x="687" y="572" width="681" height="232" frameX="58" frameY="-350" frameWidth="694" frameHeight="1095"/>
+	<SubTexture name="way left0000" x="0" y="810" width="716" height="232" frameX="130" frameY="-350" frameWidth="716" frameHeight="1032"/>
+	<SubTexture name="way left0001" x="0" y="810" width="716" height="232" frameX="130" frameY="-350" frameWidth="716" frameHeight="1032"/>
+	<SubTexture name="way left0002" x="716" y="810" width="692" height="232" frameX="130" frameY="-350" frameWidth="716" frameHeight="1032"/>
+	<SubTexture name="way right0000" x="1408" y="810" width="612" height="232" frameX="28" frameY="-350" frameWidth="633" frameHeight="1032"/>
+	<SubTexture name="way right0001" x="1408" y="810" width="612" height="232" frameX="28" frameY="-350" frameWidth="633" frameHeight="1032"/>
+	<SubTexture name="way right0002" x="0" y="1042" width="623" height="232" frameX="28" frameY="-350" frameWidth="633" frameHeight="1032"/>
+	<SubTexture name="way up0000" x="623" y="1042" width="557" height="318" frameX="58" frameY="-300" frameWidth="596" frameHeight="1018"/>
+	<SubTexture name="way up0001" x="623" y="1042" width="557" height="318" frameX="58" frameY="-300" frameWidth="596" frameHeight="1018"/>
+	<SubTexture name="way up0002" x="1180" y="1042" width="596" height="275" frameX="58" frameY="-300" frameWidth="596" frameHeight="1018"/>
 </TextureAtlas>

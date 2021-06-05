@@ -413,7 +413,7 @@ class PlayState extends MusicBeatState
 
 					var bak:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('wayBg/wayback', 'way'));
 					bak.antialiasing = true;
-					bak.scrollFactor.set(0.9, 0.9);
+					bak.scrollFactor.set(0.3, 0.3);
 					bak.active = false;
 					add(bak);
 
@@ -429,6 +429,14 @@ class PlayState extends MusicBeatState
 					flor.active = false;
 					add(flor);
 					
+			case 'sussyBg':
+					curStage = 'sussyBg';
+
+					var bg:FlxSprite = new FlxSprite( -317.8, -274.85).loadGraphic(Paths.image('sussyBg/sussyBg', 'way'));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(0.2, 0.2);
+					bg.active = false;
+					add(bg);
 			case 'MadWayBg':
 			{
 					curStage = 'MadWayBg';
@@ -844,6 +852,9 @@ class PlayState extends MusicBeatState
 			case 'wayBg':
 				dad.x = 112.5;
 				dad.y = 558.3;
+			case 'sussyBg':
+				dad.x = 126;
+				dad.y = 823;
 		}
 
 
@@ -863,6 +874,11 @@ class PlayState extends MusicBeatState
 				boyfriend.y = 332.4;
 				gf.x = 317.2;
 				gf.y = 52.3;
+			case 'sussyBg':
+				boyfriend.x = 1199;
+				boyfriend.y = 559;
+				gf.x = 564.45;
+				gf.y = 274.35;
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;

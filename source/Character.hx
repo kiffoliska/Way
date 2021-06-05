@@ -600,6 +600,13 @@ class Character extends FlxSprite
 				addOffset("singDOWN");
 					
 				playAnim('idle');
+			case 'way-dead':
+				frames = Paths.getSparrowAtlas('characters/dedway');
+				animation.addByPrefix('idle', 'dedway', 24, false);
+
+				addOffset('idle');
+
+				playAnim('idle');
 		}
 
 		dance();

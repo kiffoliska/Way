@@ -2,5 +2,5 @@
 <TextureAtlas imagePath="dedway.png">
 	<!-- Created with Adobe Animate version 19.0.0.326 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="dedway0000" x="0" y="0" width="587" height="232" frameX="0" frameY="-430" frameWidth="0" frameHeight="800"/>
+	<SubTexture name="dedway0000" x="0" y="0" width="587" height="232"/>
 </TextureAtlas>

@@ -604,7 +604,7 @@ class Character extends FlxSprite
 				frames = Paths.getSparrowAtlas('characters/dedway');
 				animation.addByPrefix('idle', 'dedway', 24, false);
 
-				addOffset('idle');
+				addOffset('idle', 0, -500);
 
 				playAnim('idle');
 		}

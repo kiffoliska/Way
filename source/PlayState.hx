@@ -3179,9 +3179,21 @@ class PlayState extends MusicBeatState
 			else
 				fc = true;
 			totalPlayed += 1;
+
 			accuracy = totalNotesHit / totalPlayed * 100;
 			accuracyDefault = totalNotesHitDefault / totalPlayed * 100; // isnt part of 1.2 but i have to add this cause funny KE
+		// funny accuracy min shit
+			// basically: if accuracy smaller than 0 set accuracy to 0. makes it cooler
+			if (accuracy < 0)
+				{
+					accuracy = 0;
+					accuracyDefault = 0;
+				}
+		
 		}
+
+// what thefuck
+
 
 
 	function getKeyPresses(note:Note):Int

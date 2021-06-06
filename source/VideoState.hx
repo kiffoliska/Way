@@ -39,10 +39,10 @@ class VideoState extends MusicBeatState
 		
 		leSource = source;
 		transClass = toTrans;
-		if (frameSkipLimit != -1 && GlobalVideo.isWebm) //this skipsteplimit doesn't let me build the game aaaaaaaaaaaaaaa
+		/*if (frameSkipLimit != -1 && GlobalVideo.isWebm) //this skipsteplimit doesn't let me build the game aaaaaaaaaaaaaaa
 		{
 			GlobalVideo.getWebm().SKIP_STEP_LIMIT = frameSkipLimit;	
-		}
+		}*/
 	}
 	
 	override function create()

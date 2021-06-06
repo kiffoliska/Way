@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="way mad.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="way mad0000" x="0" y="0" width="317" height="148" frameX="-3" frameY="-5" frameWidth="328" frameHeight="161"/>
+	<SubTexture name="way mad0001" x="317" y="0" width="318" height="147" frameX="-6" frameY="0" frameWidth="328" frameHeight="161"/>
+	<SubTexture name="way mad0002" x="635" y="0" width="317" height="147" frameX="0" frameY="-6" frameWidth="328" frameHeight="161"/>
+	<SubTexture name="way mad0003" x="0" y="148" width="317" height="147" frameX="0" frameY="-14" frameWidth="328" frameHeight="161"/>
+	<SubTexture name="way mad0004" x="317" y="148" width="318" height="143" frameX="-6" frameY="-15" frameWidth="328" frameHeight="161"/>
+	<SubTexture name="way mad0005" x="635" y="148" width="317" height="144" frameX="-11" frameY="-12" frameWidth="328" frameHeight="161"/>
+</TextureAtlas>

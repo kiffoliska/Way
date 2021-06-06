@@ -157,9 +157,18 @@ class DialogueBox extends FlxSpriteGroup
 			}
 		else if (PlayState.SONG.song.toLowerCase() == 'way')
 			{
-				portraitLeft = new FlxSprite(50, 333.3);
+				portraitLeft = new FlxSprite(0, 333.3);
 				portraitLeft.frames = Paths.getSparrowAtlas('portraits/way enter', 'way');
 				portraitLeft.animation.addByPrefix('enter', 'way enter', 24, false);
+				portraitLeft.updateHitbox();
+				portraitLeft.scrollFactor.set();
+				add(portraitLeft);
+			}
+		else if (PlayState.SONG.song.toLowerCase() == 'always')
+			{
+				portraitLeft = new FlxSprite(0, 333.3);
+				portraitLeft.frames = Paths.getSparrowAtlas('portraits/way mad', 'way');
+				portraitLeft.animation.addByPrefix('enter', 'way mad', 24, false);
 				portraitLeft.updateHitbox();
 				portraitLeft.scrollFactor.set();
 				add(portraitLeft);
@@ -174,7 +183,7 @@ class DialogueBox extends FlxSpriteGroup
 				portraitRight.scrollFactor.set();
 				add(portraitRight);
 			}
-		else if (PlayState.SONG.song.toLowerCase() == 'way')
+		else if (PlayState.SONG.song.toLowerCase() == 'way' || PlayState.SONG.song.toLowerCase() == 'always' || PlayState.SONG.song.toLowerCase() == 'no-way')
 			{
 				portraitRight = new FlxSprite(699.35, 207.3);
 				portraitRight.frames = Paths.getSparrowAtlas('portraits/bf', 'way');

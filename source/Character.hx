@@ -585,7 +585,7 @@ class Character extends FlxSprite
 						
 				playAnim('idle');
 	
-			case 'way-mad': //grrr mad
+			case 'way-mad':
 				frames = Paths.getSparrowAtlas('characters/way3');
 				animation.addByPrefix('idle', 'idle', 24, false);
 				animation.addByPrefix('singUP', 'up', 24, false);
@@ -600,7 +600,7 @@ class Character extends FlxSprite
 				addOffset("singDOWN");
 					
 				playAnim('idle');
-			case 'way-dead':
+			case 'way-dead': //dedway adventure
 				frames = Paths.getSparrowAtlas('characters/dedway');
 				animation.addByPrefix('idle', 'dedway', 24, false);
 

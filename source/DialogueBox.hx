@@ -157,8 +157,8 @@ class DialogueBox extends FlxSpriteGroup
 			}
 		else if (PlayState.SONG.song.toLowerCase() == 'way')
 			{
-				portraitLeft = new FlxSprite(-20, 40);
-				portraitLeft.frames = Paths.getSparrowAtlas('portraits/way');
+				portraitLeft = new FlxSprite(50, 333.3);
+				portraitLeft.frames = Paths.getSparrowAtlas('portraits/way enter', 'way');
 				portraitLeft.animation.addByPrefix('enter', 'way enter', 24, false);
 				portraitLeft.updateHitbox();
 				portraitLeft.scrollFactor.set();
@@ -176,8 +176,8 @@ class DialogueBox extends FlxSpriteGroup
 			}
 		else if (PlayState.SONG.song.toLowerCase() == 'way')
 			{
-				portraitRight = new FlxSprite(0, 40);
-				portraitRight.frames = Paths.getSparrowAtlas('portraits/bf');
+				portraitRight = new FlxSprite(699.35, 207.3);
+				portraitRight.frames = Paths.getSparrowAtlas('portraits/bf', 'way');
 				portraitRight.animation.addByPrefix('enter', 'bf enter', 24, false);
 				portraitRight.updateHitbox();
 				portraitRight.scrollFactor.set();

@@ -341,6 +341,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('always/alwaysDialogue'));
 			case 'no-way':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('no-way/no-wayDialogue'));
+			case 'sussy':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('sussy/sussyDialogue'));
 		}
 
 		switch(SONG.stage)

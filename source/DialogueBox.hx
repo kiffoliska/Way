@@ -183,7 +183,7 @@ class DialogueBox extends FlxSpriteGroup
 				portraitRight.scrollFactor.set();
 				add(portraitRight);
 			}
-		else if (PlayState.SONG.song.toLowerCase() == 'way' || PlayState.SONG.song.toLowerCase() == 'always' || PlayState.SONG.song.toLowerCase() == 'no-way')
+		else if (PlayState.SONG.song.toLowerCase() == 'way' || PlayState.SONG.song.toLowerCase() == 'always' || PlayState.SONG.song.toLowerCase() == 'no-way' || PlayState.SONG.song.toLowerCase() == 'sussy')
 			{
 				portraitRight = new FlxSprite(699.35, 207.3);
 				portraitRight.frames = Paths.getSparrowAtlas('portraits/bf', 'way');

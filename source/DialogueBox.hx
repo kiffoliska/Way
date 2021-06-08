@@ -164,7 +164,7 @@ class DialogueBox extends FlxSpriteGroup
 				portraitLeft.scrollFactor.set();
 				add(portraitLeft);
 			}
-		else if (PlayState.SONG.song.toLowerCase() == 'always')
+		else if (PlayState.SONG.song.toLowerCase() == 'always' || PlayState.SONG.song.toLowerCase() == 'no-way' || PlayState.SONG.song.toLowerCase() == 'sussy')
 			{
 				portraitLeft = new FlxSprite(0, 333.3);
 				portraitLeft.frames = Paths.getSparrowAtlas('portraits/way mad', 'way');

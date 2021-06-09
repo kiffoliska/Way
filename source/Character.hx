@@ -561,11 +561,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'way left', 24, false);
 				animation.addByPrefix('singRIGHT', 'way right', 24, false);
 		
-				addOffset('idle');
-				addOffset("singUP");
-				addOffset("singRIGHT");
-				addOffset("singLEFT");
-				addOffset("singDOWN");
+				addOffset('idle', -47, -435);
+				addOffset("singUP", -55, -401);
+				addOffset("singRIGHT", -59, -435);
+				addOffset("singLEFT", -16, -433);
+				addOffset("singDOWN", -55, -477);
 						
 				playAnim('idle');
 		
@@ -577,11 +577,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'way left', 24, false);
 				animation.addByPrefix('singRIGHT', 'way right', 24, false);
 		
-				addOffset('idle');
-				addOffset("singUP");
-				addOffset("singRIGHT");
-				addOffset("singLEFT");
-				addOffset("singDOWN");
+				addOffset('idle', -47, -435);
+				addOffset("singUP", -55, -439);
+				addOffset("singRIGHT", -47, -435);
+				addOffset("singLEFT", -12, -435);
+				addOffset("singDOWN", -68, -435);
 						
 				playAnim('idle');
 	
@@ -593,18 +593,18 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'left', 24, false);
 				animation.addByPrefix('singRIGHT', 'right', 24, false);
 	
-				addOffset('idle');
-				addOffset("singUP");
-				addOffset("singRIGHT");
-				addOffset("singLEFT");
-				addOffset("singDOWN");
+				addOffset('idle', 0, 0);
+				addOffset("singUP", 8, 85);
+				addOffset("singRIGHT", -81, -28);
+				addOffset("singLEFT", 4, -1);
+				addOffset("singDOWN", -177, -57);
 					
 				playAnim('idle');
 			case 'way-dead': //dedway adventure
 				frames = Paths.getSparrowAtlas('characters/dedway');
 				animation.addByPrefix('idle', 'dedway', 24, false);
 
-				addOffset('idle', 0, -603);
+				addOffset('idle', 0, -703);
 
 				playAnim('idle');
 		}

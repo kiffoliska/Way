@@ -2,4 +2,4 @@ Tutorial:gf:1
 Way:way:7
 Always:way-angy:7
 No-way:way-mad:7
-Sussy:way-dead:7
+Sussy:bf-sus:7

@@ -593,13 +593,14 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'left', 24, false);
 				animation.addByPrefix('singRIGHT', 'right', 24, false);
 	
-				addOffset('idle', 0, 0);
-				addOffset("singUP", 8, 85);
-				addOffset("singRIGHT", -81, -28);
-				addOffset("singLEFT", 4, -1);
-				addOffset("singDOWN", -177, -57);
+				addOffset('idle', 209, 65);
+				addOffset("singUP", 235, 145);
+				addOffset("singRIGHT", 99, 34);
+				addOffset("singLEFT", 233, 64);
+				addOffset("singDOWN", 8, 9);
 					
 				playAnim('idle');
+
 			case 'way-dead': //dedway adventure
 				frames = Paths.getSparrowAtlas('characters/dedway');
 				animation.addByPrefix('idle', 'dedway', 24, false);

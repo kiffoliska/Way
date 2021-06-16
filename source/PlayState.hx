@@ -442,6 +442,8 @@ class PlayState extends MusicBeatState
 			case 'MadWayBg':
 			{
 					curStage = 'MadWayBg';
+					defaultCamZoom = 0.9;
+
 					var backBG:FlxSprite = new FlxSprite(-622.5, -311.7);
 					backBG.frames = Paths.getSparrowAtlas('MadWayBg/back', 'way');  // should work? //idk
 					backBG.animation.addByPrefix('idle', "bg back", 24, true);
@@ -469,7 +471,7 @@ class PlayState extends MusicBeatState
 					redBG.active = true;
 					add(redBG);
 
-					var floorBG:FlxSprite = new FlxSprite(-596.7, -38.6).loadGraphic(Paths.image('MadWayBg/floor', 'way'));
+					var floorBG:FlxSprite = new FlxSprite(-621.85, 506.8).loadGraphic(Paths.image('MadWayBg/floor', 'way'));
 					floorBG.antialiasing = true;
 					floorBG.scrollFactor.set(0.9, 0.9);
 					floorBG.active = false;
@@ -849,8 +851,8 @@ class PlayState extends MusicBeatState
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'MadWayBg':
-				dad.x = -345.3;
-				dad.y = -44.7;
+				dad.x = -310.15;
+				dad.y = -61.25;
 			case 'wayBg':
 				dad.x = 112.5;
 				dad.y = 558.3;

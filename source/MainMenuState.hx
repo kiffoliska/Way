@@ -165,9 +165,9 @@ class MainMenuState extends MusicBeatState
 				if (optionShit[curSelected] == 'donate')
 				{
 					#if linux
-					Sys.command('/usr/bin/xdg-open', ["https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game", "&"]);
+					Sys.command('/usr/bin/xdg-open', ["https://soundcloud.com/gema-police4123/tittle-song-official-way-funkin-ost", "&"]);
 					#else
-					FlxG.openURL('https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game');
+					FlxG.openURL('https://soundcloud.com/gema-police4123/tittle-song-official-way-funkin-ost');
 					#end
 				}
 				else

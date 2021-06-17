@@ -2556,9 +2556,9 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					if (curSong == 'way')
+					if (curSong == 'sussy')
 						{
-							FlxG.switchState(new EndingState(health <= 1));
+							FlxG.switchState(new EndingState(health <= 0.5));
 						}
 					else 
 						{

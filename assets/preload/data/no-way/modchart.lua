@@ -11,14 +11,14 @@ function stepHit (step) --way screaming
     end
 
     if step == 925 then
-        setCamZoom(1.3)
+        setCamZoom(1.4)
     end
 end
 
 function beatHit (beat) --zooming cuz why not
     if beat then
         for i = 0.9, 0.9, 0.9 do --current camera zoom????? idk
-            setCamZoom(0.92) --what zoom set to i think
+            setCamZoom(0.94) --what zoom set to i think
         end
     end
 end

@@ -850,9 +850,9 @@ class PlayState extends MusicBeatState
 				dad.x -= 150;
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'MadWayBg':
-				dad.x = -310.15;
-				dad.y = -61.25;
+			// case 'MadWayBg':
+			// 	dad.x = -310.15;
+			// 	dad.y = -101.25;
 			case 'wayBg':
 				dad.x = 112.5;
 				dad.y = 558.3;
@@ -927,6 +927,8 @@ class PlayState extends MusicBeatState
 
 		add(dad);
 		add(boyfriend);
+		//remember to add madway layers later
+
 		if (loadRep)
 		{
 			FlxG.watch.addQuick('rep rpesses',repPresses);
@@ -2558,10 +2560,10 @@ class PlayState extends MusicBeatState
 				{
 					if (curSong == 'sussy')
 						{
-							FlxG.switchState(new EndingState(health <= 0.5));
+							FlxG.switchState(new EndingState(accuracy >= 70));
 						}
-					else 
-						{
+							
+					else{
 							FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 							transIn = FlxTransitionableState.defaultTransIn;
@@ -2579,7 +2581,6 @@ class PlayState extends MusicBeatState
 
 							// if ()
 							StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
-
 						}
 					
 					if (SONG.validScore)

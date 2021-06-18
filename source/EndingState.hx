@@ -10,6 +10,7 @@ class EndingState extends FlxState
 {
 
 	var _goodEnding:Bool = false;
+	var _badEnding:Bool = false;
 	
 	public function new(goodEnding:Bool = true) 
 	{
@@ -17,7 +18,7 @@ class EndingState extends FlxState
 		_goodEnding = goodEnding;
 		
 	}
-	
+
 	override public function create():Void 
 	{
 		super.create();
@@ -25,10 +26,21 @@ class EndingState extends FlxState
 		if (_goodEnding){
 			end.loadGraphic(Paths.image("susending"));
 			FlxG.sound.playMusic(Paths.music("freakyMenu"),1,false);
-		}else{
-			//too lazy to remove this and test stuff so both endings are the same LOL
-			end.loadGraphic(Paths.image("susending"));
-			FlxG.sound.playMusic(Paths.music("freakyMenu"),1,false);
+			FlxG.camera.fade(FlxColor.BLACK, 0.8, true);
+		}
+		else
+		{
+			if(FlxG.random.bool(70))
+				{
+					end.loadGraphic(Paths.image("susending"));
+					FlxG.sound.playMusic(Paths.music("freakyMenu"), 1, false);
+					FlxG.camera.fade(FlxColor.BLACK, 0.8, true);
+				}
+			else
+				{
+					end.loadGraphic(Paths.image("susending"));
+					FlxG.sound.playMusic(Paths.music("freakyMenu"), 1, false);
+				}
 		}
 		add(end);
 		FlxG.camera.fade(FlxColor.BLACK, 0.8, true);

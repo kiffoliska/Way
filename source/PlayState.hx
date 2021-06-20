@@ -412,25 +412,29 @@ class PlayState extends MusicBeatState
 			}
 			case 'wayBg':
 					curStage = 'wayBg';
+					defaultCamZoom = 0.78;
 
-					var bak:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('wayBg/wayback', 'way'));
+					var bak:FlxSprite = new FlxSprite( -515.75, -273.75).loadGraphic(Paths.image('wayBg/wayback', 'way'));
 					bak.antialiasing = true;
-					bak.scrollFactor.set(0.3, 0.3);
+					bak.scrollFactor.set(0, 0);
 					bak.active = false;
+					bak.updateHitbox();
 					add(bak);
 
-					var cave:FlxSprite = new FlxSprite( -110.95, -50).loadGraphic(Paths.image('wayBg/waycave', 'way'));
-					cave.antialiasing = true;
-					cave.scrollFactor.set(0.8, 0.8);
-					cave.active = false;
-					add(cave);
+					var light:FlxSprite = new FlxSprite( 74.55, -322.25).loadGraphic(Paths.image('wayBg/waylight', 'way'));
+					light.antialiasing = true;
+					light.scrollFactor.set(0.1, 0.1);
+					light.active = false;
+					light.updateHitbox();
+					add(light);
 
-					var flor:FlxSprite = new FlxSprite( -121.55, 802.8).loadGraphic(Paths.image('wayBg/wayfloor', 'way'));
+					var flor:FlxSprite = new FlxSprite( -502.65, 702.35).loadGraphic(Paths.image('wayBg/wayfloor', 'way'));
 					flor.antialiasing = true;
 					flor.scrollFactor.set(0.9, 0.9);
 					flor.active = false;
+					flor.updateHitbox();
 					add(flor);
-					
+
 			case 'sussyBg':
 					curStage = 'sussyBg';
 
@@ -853,9 +857,6 @@ class PlayState extends MusicBeatState
 			// case 'MadWayBg':
 			// 	dad.x = -310.15;
 			// 	dad.y = -101.25;
-			case 'wayBg':
-				dad.x = 112.5;
-				dad.y = 558.3;
 			case 'sussyBg':
 				dad.x = 126;
 				dad.y = 823;
@@ -869,15 +870,36 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'wayBg':
-				boyfriend.x = 1324.9; //wtf
-				boyfriend.y = 537.2;
-				gf.x = 623.85;
-				gf.y = 263.45;
+				boyfriend.x = 1308.5;
+				boyfriend.y = 624.55; //624
+
+				gf.x = 609.7;
+				gf.y = 346.15; //346
+
+				dad.x = 257.8;
+				dad.y = 604.25; //604
+
+				boyfriend.width = 424.8;
+				boyfriend.height = 417.7;
+
+				gf.width = 703.3;
+				gf.height = 672.25;
+
+				dad.width = 399.85;
+				dad.height = 171.15;
 			case 'MadWayBg':
-				boyfriend.x = 1006.75; //what.
+				boyfriend.x = 1006.75;
 				boyfriend.y = 332.4;
+
 				gf.x = 317.2;
 				gf.y = 52.3;
+
+				dad.x = -327.15;
+				dad.y = -59.75;
+				if(FlxG.save.data.distractions){
+					var evilTrail = new FlxTrail(dad, null, 1, 24, 0.3, 0.069);
+					add(evilTrail);
+				}
 			case 'sussyBg':
 				boyfriend.x = 1199;
 				boyfriend.y = 559;
@@ -927,6 +949,29 @@ class PlayState extends MusicBeatState
 
 		add(dad);
 		add(boyfriend);
+
+
+		if (curStage == 'wayBg')
+			add(dad);
+			add(boyfriend);
+			
+		if (curStage == 'wayBg')
+			{
+				var bottom:FlxSprite = new FlxSprite( -660.6, 626.45).loadGraphic(Paths.image('wayBg/waybottom', 'way'));
+				bottom.antialiasing = true;
+				bottom.scrollFactor.set(0.9, 0.9);
+				bottom.active = false;
+				bottom.updateHitbox();
+				add(bottom);
+
+				var top:FlxSprite = new FlxSprite( -410.15, -199.55).loadGraphic(Paths.image('wayBg/waytop', 'way'));
+				top.antialiasing = true;
+				top.scrollFactor.set(0.8, 0.8);
+				top.active = false;
+				top.updateHitbox();
+				add(top);
+			}
+
 		//remember to add madway layers later
 
 		if (loadRep)

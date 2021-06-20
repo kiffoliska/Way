@@ -460,7 +460,25 @@ class RainbowFPSOption extends Option
 		return "FPS Rainbow " + (!FlxG.save.data.fpsRain ? "off" : "on");
 	}
 }
+/*class FullScreen extends Option
+{
+	public function new(desc:String) 
+	{
+		super();
+		// description = desc;		
+	}
 
+	public override function press():Bool
+	{
+		FlxG.save.data.fullscreen = !FlxG.save.data.fullscreen;
+		FlxG.fullscreen = !FlxG.fullscreen;
+	}
+
+	private override function updateDisplay():String
+	{
+		return "Toggle FullScreen " + (!FlxG.save.data.fullscreen ? "off" : "on")	;
+	}
+}*/
 class NPSDisplayOption extends Option
 {
 	public function new(desc:String)

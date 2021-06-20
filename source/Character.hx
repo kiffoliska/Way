@@ -561,11 +561,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'way left', 24, false);
 				animation.addByPrefix('singRIGHT', 'way right', 24, false);
 		
-				addOffset('idle', -47, -435);
-				addOffset("singUP", -55, -401);
-				addOffset("singRIGHT", -59, -435);
-				addOffset("singLEFT", -16, -433);
-				addOffset("singDOWN", -55, -477);
+				addOffset('idle', -47, -35);
+				addOffset("singUP", -55, -1);
+				addOffset("singRIGHT", -59, -35);
+				addOffset("singLEFT", -16, -33);
+				addOffset("singDOWN", -55, -77);
 						
 				playAnim('idle');
 		
@@ -577,11 +577,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'way left', 24, false);
 				animation.addByPrefix('singRIGHT', 'way right', 24, false);
 		
-				addOffset('idle', -47, -435);
-				addOffset("singUP", -55, -439);
-				addOffset("singRIGHT", -47, -435);
-				addOffset("singLEFT", -12, -435);
-				addOffset("singDOWN", -68, -435);
+				addOffset('idle', -47, -35);
+				addOffset("singUP", -55, -39);
+				addOffset("singRIGHT", -47, -35);
+				addOffset("singLEFT", -12, -35);
+				addOffset("singDOWN", -68, -35);
 						
 				playAnim('idle');
 	
@@ -593,11 +593,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'left', 24, false);
 				animation.addByPrefix('singRIGHT', 'right', 24, false);
 	
-				addOffset('idle', 208, 100); //backup off set if something goes wrong 209, 65
-				addOffset("singUP", 168, 166); //235, 145
-				addOffset("singRIGHT", 99, 69); //99, 34
-				addOffset("singLEFT", 234, 100); //233, 64
-				addOffset("singDOWN", 12, 39); //8, 9
+				addOffset('idle', 208, 0); //backup off set if something goes wrong 209, 65
+				addOffset("singUP", 168, 66); //235, 145
+				addOffset("singRIGHT", 99, -31); //99, 34
+				addOffset("singLEFT", 234, 0); //233, 64
+				addOffset("singDOWN", 12, -61); //8, 9
 					
 				playAnim('idle');
 

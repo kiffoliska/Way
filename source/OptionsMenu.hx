@@ -60,7 +60,6 @@ class OptionsMenu extends MusicBeatState
 			new WatermarkOption("Enable and disable all watermarks from the engine."),
 			new BotPlay("Showcase your charts and mods with autoplay.")
 		])
-		
 	];
 
 	public var acceptInput:Bool = true;

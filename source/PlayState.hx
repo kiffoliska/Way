@@ -3498,6 +3498,17 @@ class PlayState extends MusicBeatState
 	override function stepHit()
 	{
 		super.stepHit();
+
+		if (curSong == 'no-way') 
+			{
+				switch (curStep)
+				{
+					case 482:
+					  boyfriend.playAnim("hit");
+					case 925:
+						boyfriend.playAnim("hit");
+				 }
+			}
 		if (FlxG.sound.music.time > Conductor.songPosition + 20 || FlxG.sound.music.time < Conductor.songPosition - 20)
 		{
 			resyncVocals();

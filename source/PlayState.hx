@@ -807,6 +807,8 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-pixel';
 			case 'speakers': //i finally realized that i have to it here, cuz i have dumb
 				gfVersion = 'speakers';
+			case 'gf-rtx':
+				gfVersion = 'gf-rtx';
 			default:
 				gfVersion = 'gf';
 		}
@@ -3503,10 +3505,12 @@ class PlayState extends MusicBeatState
 			{
 				switch (curStep)
 				{
-					case 482:
-					  boyfriend.playAnim("hit");
+					case 481:
+						boyfriend.playAnim("hit");
+						gf.playAnim("scared");
 					case 925:
 						boyfriend.playAnim("hit");
+						gf.playAnim("scared");
 				 }
 			}
 		if (FlxG.sound.music.time > Conductor.songPosition + 20 || FlxG.sound.music.time < Conductor.songPosition - 20)

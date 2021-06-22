@@ -338,8 +338,6 @@ class FPSOption extends Option
 	}
 }
 
-
-
 class FPSCapOption extends Option
 {
 	public function new(desc:String)

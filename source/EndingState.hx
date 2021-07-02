@@ -9,13 +9,13 @@ import flixel.util.FlxTimer;
 class EndingState extends FlxState
 {
 
-	var _goodEnding:Bool = false;
+	var _susEnding:Bool = false;
 	var _badEnding:Bool = false;
 	
-	public function new(goodEnding:Bool = true) 
+	public function new(susEnding:Bool = true) 
 	{
 		super();
-		_goodEnding = goodEnding;
+		_susEnding = susEnding;
 		
 	}
 
@@ -23,9 +23,9 @@ class EndingState extends FlxState
 	{
 		super.create();
 		var end:FlxSprite = new FlxSprite(0, 0);
-		if (_goodEnding){
+		if (_susEnding){
 			end.loadGraphic(Paths.image("susending"));
-			FlxG.sound.playMusic(Paths.music("freakyMenu"),1,false);
+			FlxG.sound.playMusic(Paths.music("susending"),1,false);
 			FlxG.camera.fade(FlxColor.BLACK, 0.8, true);
 		}
 		else
@@ -33,13 +33,13 @@ class EndingState extends FlxState
 			if(FlxG.random.bool(70))
 				{
 					end.loadGraphic(Paths.image("susending"));
-					FlxG.sound.playMusic(Paths.music("freakyMenu"), 1, false);
+					FlxG.sound.playMusic(Paths.music("susending"), 1, false);
 					FlxG.camera.fade(FlxColor.BLACK, 0.8, true);
 				}
 			else
 				{
 					end.loadGraphic(Paths.image("susending"));
-					FlxG.sound.playMusic(Paths.music("freakyMenu"), 1, false);
+					FlxG.sound.playMusic(Paths.music("susending"), 1, false);
 				}
 		}
 		add(end);

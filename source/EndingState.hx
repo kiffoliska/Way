@@ -10,14 +10,14 @@ class EndingState extends FlxState
 {
 
 	var _susEnding:Bool = false;
-	var _badEnding:Bool = false;
+	var _goodEnding:Bool = false;
 	
 	public function new(susEnding:Bool = true) 
 	{
 		super();
 		_susEnding = susEnding;
 		
-	}
+	};
 
 	override public function create():Void 
 	{
@@ -30,17 +30,7 @@ class EndingState extends FlxState
 		}
 		else
 		{
-			if(FlxG.random.bool(70))
-				{
-					end.loadGraphic(Paths.image("susending"));
-					FlxG.sound.playMusic(Paths.music("susending"), 1, false);
-					FlxG.camera.fade(FlxColor.BLACK, 0.8, true);
-				}
-			else
-				{
-					end.loadGraphic(Paths.image("susending"));
-					FlxG.sound.playMusic(Paths.music("susending"), 1, false);
-				}
+			FlxG.switchState(new StoryMenuState());
 		}
 		add(end);
 		FlxG.camera.fade(FlxColor.BLACK, 0.8, true);

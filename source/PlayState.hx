@@ -2605,12 +2605,13 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					if (curSong == 'sussy')
-						{
+					switch (curSong)
+					{
+						case 'no way':
+							FlxG.switchState(new EndingState(accuracy < 70));
+						case 'sussy':
 							FlxG.switchState(new EndingState(accuracy >= 70));
-						}
-							
-					else{
+						default:
 							FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 							transIn = FlxTransitionableState.defaultTransIn;
@@ -2628,8 +2629,7 @@ class PlayState extends MusicBeatState
 
 							// if ()
 							StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
-						}
-					
+					}
 					if (SONG.validScore)
 					{
 						NGio.unlockMedal(60961);

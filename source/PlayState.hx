@@ -2607,8 +2607,9 @@ class PlayState extends MusicBeatState
 				{
 					switch (curSong)
 					{
-						case 'no way':
-							FlxG.switchState(new EndingState(accuracy < 70));
+						case 'no-way':
+							if (accuracy < 65)
+								FlxG.switchState(new EndingState());
 						case 'sussy':
 							FlxG.switchState(new EndingState(accuracy >= 70));
 						default:

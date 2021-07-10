@@ -638,11 +638,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'left', 24, false);
 				animation.addByPrefix('singRIGHT', 'right', 24, false);
 	
-				addOffset('idle', 208, 0); //backup off set if something goes wrong 209, 65
-				addOffset("singUP", 168, 66); //235, 145
-				addOffset("singRIGHT", 99, -31); //99, 34
-				addOffset("singLEFT", 234, 0); //233, 64
-				addOffset("singDOWN", 12, -61); //8, 9
+				addOffset('idle', 208, 0);
+				addOffset("singUP", 168, 66);
+				addOffset("singRIGHT", 99, -31);
+				addOffset("singLEFT", 234, 0);
+				addOffset("singDOWN", 12, -61);
 					
 				playAnim('idle');
 
@@ -651,6 +651,22 @@ class Character extends FlxSprite
 				animation.addByPrefix('idle', 'dedway', 24, false);
 
 				addOffset('idle', 0, -703);
+
+				playAnim('idle');
+
+			case 'expurgation':
+				frames = Paths.getSparrowAtlas('characters/expurgation');
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+
+				addOffset('idle', 0, -169);
+				addOffset("singUP", 59, 133);
+				addOffset("singRIGHT", -339, -261);
+				addOffset("singLEFT", 342, 5);
+				addOffset("singDOWN", -31, -553);
 
 				playAnim('idle');
 		}

@@ -3,3 +3,4 @@ Way:way:7
 Always:way-angy:7
 No-way:way-mad:7
 Sussy:bf-sus:7
+expurgation:way-mad:8

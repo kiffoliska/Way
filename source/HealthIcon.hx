@@ -35,6 +35,7 @@ class HealthIcon extends FlxSprite
 		animation.add('way', [24, 26], 0, false, isPlayer);
 		animation.add('way-angy', [25, 26], 0, false, isPlayer);
 		animation.add('way-mad', [27, 27], 0, false, isPlayer);
+		animation.add('expurgation', [27, 27], 0, false, isPlayer);
 		animation.add('way-dead', [32, 32], 0, false, isPlayer);
 		animation.add('bf-old', [14, 15], 0, false, isPlayer);
 		animation.add('gf', [16], 0, false, isPlayer);

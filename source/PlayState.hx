@@ -1,5 +1,6 @@
 package;
 
+import haxe.ds.BalancedTree;
 import flixel.input.keyboard.FlxKey;
 import haxe.Exception;
 import openfl.geom.Matrix;
@@ -2603,39 +2604,61 @@ class PlayState extends MusicBeatState
 
 				storyPlaylist.remove(storyPlaylist[0]);
 
+				switch (curSong)
+					{
+						case 'always':
+							if (accuracy < 60)
+								FlxG.switchState(new EndingState());
+							// else
+								// LoadingState.loadAndSwitchState(new VideoState("assets/videos/first/vid.webm", new PlayState()));
+						case 'sussy':
+							FlxG.switchState(new EndingState3());
+						case 'no-way':
+							if (accuracy < 85)
+								FlxG.switchState(new EndingState2());
+						// default:
+						// 	FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+						// 	transIn = FlxTransitionableState.defaultTransIn;
+						// 	transOut = FlxTransitionableState.defaultTransOut;
+
+						// 	FlxG.switchState(new StoryMenuState());
+
+						// 	#if windows
+						// 	if (luaModchart != null)
+						// 	{
+						// 		luaModchart.die();
+						// 		luaModchart = null;
+						// 	}
+						// 	#end
+
+						// 	// if ()
+						// 	StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
+					}
 				if (storyPlaylist.length <= 0)
 				{
-					switch (curSong)
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					FlxG.switchState(new StoryMenuState());
+
+					#if windows
+					if (luaModchart != null)
 					{
-						case 'no-way':
-							if (accuracy < 65)
-								FlxG.switchState(new EndingState());
-						case 'sussy':
-							FlxG.switchState(new EndingState(accuracy >= 70));
-						default:
-							FlxG.sound.playMusic(Paths.music('freakyMenu'));
-
-							transIn = FlxTransitionableState.defaultTransIn;
-							transOut = FlxTransitionableState.defaultTransOut;
-
-							FlxG.switchState(new StoryMenuState());
-
-							#if windows
-							if (luaModchart != null)
-							{
-								luaModchart.die();
-								luaModchart = null;
-							}
-							#end
-
-							// if ()
-							StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
+						luaModchart.die();
+						luaModchart = null;
 					}
-					if (SONG.validScore)
-					{
-						NGio.unlockMedal(60961);
-						Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
-					}
+					#end
+
+					// if ()
+					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
+				}
+				if (SONG.validScore)
+				{
+					NGio.unlockMedal(60961);
+					Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
 
 					FlxG.save.data.weekUnlocked = StoryMenuState.weekUnlocked;
 					FlxG.save.flush();

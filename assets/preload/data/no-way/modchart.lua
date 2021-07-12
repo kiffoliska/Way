@@ -24,8 +24,8 @@ end
 
 function beatHit (beat) --zooming cuz why not
     if beat then
-        for i = 0.9, 0.9, 0.9 do --current camera zoom????? idk
-            setCamZoom(0.94) --what zoom set to i think
+        for i = 1, 1, 1 do --current camera zoom????? idk how those loops work
+            setCamZoom(0.95) --what zoom set to i think
         end
     end
 end

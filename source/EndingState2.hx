@@ -30,7 +30,7 @@ class EndingState2 extends FlxState
 		if (_goodEnding)
 		{
 			end.loadGraphic(Paths.image("goodending"));
-			FlxG.sound.playMusic(Paths.music("freakyMenu"),1,false);
+			FlxG.sound.playMusic(Paths.inst("test"),1,false);
 			FlxG.camera.fade(FlxColor.BLACK, 0.8, true);
 			// 	}
 			// else

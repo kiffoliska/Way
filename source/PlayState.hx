@@ -449,34 +449,22 @@ class PlayState extends MusicBeatState
 					curStage = 'MadWayBg';
 					defaultCamZoom = 0.9;
 
-					var backBG:FlxSprite = new FlxSprite(-622.5, -311.7);
-					backBG.frames = Paths.getSparrowAtlas('MadWayBg/back', 'way');  // should work? //idk
-					backBG.animation.addByPrefix('idle', "bg back", 24, true);
+					var backBG:FlxSprite = new FlxSprite(-813.05, -229.25).loadGraphic(Paths.image('MadWayBg/bg', 'way'));
 					backBG.updateHitbox();
 					backBG.antialiasing = true;
-					backBG.scrollFactor.set(0.9, 0.9);
-					backBG.active = true;
+					backBG.scrollFactor.set(0.6, 0.6);
 					add(backBG);
 
-					var fireBG:FlxSprite = new FlxSprite(-596.7, -38.6);
-					fireBG.frames = Paths.getSparrowAtlas('MadWayBg/fire', 'way');
-					fireBG.animation.addByPrefix('idle', "fire", 24, true);
+					var fireBG:FlxSprite = new FlxSprite(-786.2, -161.15);
+					fireBG.frames = Paths.getSparrowAtlas('MadWayBg/fires', 'way');
+					fireBG.animation.addByPrefix('idle', "fires", 24, true);
 					fireBG.updateHitbox();
 					fireBG.antialiasing = true;
-					fireBG.scrollFactor.set(0.9, 0.9);
+					fireBG.scrollFactor.set(0.89, 0.89);
 					fireBG.active = true;
 					add(fireBG);
 
-					var redBG:FlxSprite = new FlxSprite(-622.5, -311.7);
-					redBG.frames = Paths.getSparrowAtlas('MadWayBg/red', 'way');
-					redBG.animation.addByPrefix('idle', "Symbol 5", 24, true); //im lazy
-					redBG.updateHitbox();
-					redBG.antialiasing = true;
-					redBG.scrollFactor.set(0.9, 0.9);
-					redBG.active = true;
-					add(redBG);
-
-					var floorBG:FlxSprite = new FlxSprite(-621.85, 506.8).loadGraphic(Paths.image('MadWayBg/floor', 'way'));
+					var floorBG:FlxSprite = new FlxSprite(-823.15, 462.35).loadGraphic(Paths.image('MadWayBg/floor', 'way'));
 					floorBG.antialiasing = true;
 					floorBG.scrollFactor.set(0.9, 0.9);
 					floorBG.active = false;
@@ -857,9 +845,14 @@ class PlayState extends MusicBeatState
 				dad.x -= 150;
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			// case 'MadWayBg':
-			// 	dad.x = -310.15;
-			// 	dad.y = -101.25;
+			case 'MadWayBg':
+				dad.x = -472.3;
+				dad.y = -40.9;
+				if (isStoryMode)
+					{
+						camPos.x += 70;
+						tweenCamIn();
+					}
 			case 'sussyBg':
 				dad.x = 126;
 				dad.y = 823;
@@ -891,14 +884,14 @@ class PlayState extends MusicBeatState
 				dad.width = 399.85;
 				dad.height = 171.15;
 			case 'MadWayBg':
-				boyfriend.x = 1006.75;
-				boyfriend.y = 332.4;
+				boyfriend.x = 920.15;
+				boyfriend.y = 327.25;
 
-				gf.x = 317.2;
-				gf.y = 52.3;
+				gf.x = 279.4;
+				gf.y = -53.95;
 
-				dad.x = -327.15;
-				dad.y = -59.75;
+				dad.x = -472.3;
+				dad.y = -40.9;
 				if(FlxG.save.data.distractions){
 					var evilTrail = new FlxTrail(dad, null, 1, 24, 0.3, 0.069);
 					add(evilTrail);
@@ -974,6 +967,27 @@ class PlayState extends MusicBeatState
 				top.updateHitbox();
 				add(top);
 			}
+		if (curStage == 'MadWayBg')
+			add(dad);
+			add(boyfriend);
+
+		if (curStage == 'MadWayBg')
+			{
+				var bottom:FlxSprite = new FlxSprite( -709, 325.7).loadGraphic(Paths.image('MadWayBg/bottom', 'way'));
+				bottom.antialiasing = true;
+				bottom.scrollFactor.set(0.78, 0.78);
+				bottom.active = false;
+				bottom.updateHitbox();
+				add(bottom);
+
+				var top:FlxSprite = new FlxSprite( -894.2, -298.05).loadGraphic(Paths.image('MadWayBg/top', 'way'));
+				top.antialiasing = true;
+				top.scrollFactor.set(0.8, 0.8);
+				top.active = false;
+				top.updateHitbox();
+				add(top);
+			}
+			
 
 		//remember to add madway layers later
 
@@ -1180,6 +1194,7 @@ class PlayState extends MusicBeatState
 				case 'way':
 					schoolIntro(doof);
 				case 'always':
+					FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 				case 'no-way':
 					schoolIntro(doof);
@@ -2607,15 +2622,75 @@ class PlayState extends MusicBeatState
 				switch (curSong)
 					{
 						case 'always':
-							if (accuracy < 60)
+							if (accuracy <= 60)
 								FlxG.switchState(new EndingState());
-							// else
-								// LoadingState.loadAndSwitchState(new VideoState("assets/videos/first/vid.webm", new PlayState()));
+							else
+								{
+									var difficulty:String = "";
+
+									if (storyDifficulty == 0)
+										difficulty = '-easy';
+
+									if (storyDifficulty == 2)
+										difficulty = '-hard';
+									trace('LOADING NEXT SONG');
+									trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
+									FlxTransitionableState.skipNextTransIn = true;
+									FlxTransitionableState.skipNextTransOut = true;
+									prevCamFollow = camFollow;
+
+									PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
+									FlxG.sound.music.stop();
+
+									LoadingState.loadAndSwitchState(new PlayState());
+								}
 						case 'sussy':
 							FlxG.switchState(new EndingState3());
 						case 'no-way':
-							if (accuracy < 85)
+							if (accuracy <= 85)
 								FlxG.switchState(new EndingState2());
+							else
+								{
+									var difficulty:String = "";
+
+									if (storyDifficulty == 0)
+										difficulty = '-easy';
+
+									if (storyDifficulty == 2)
+										difficulty = '-hard';
+									trace('LOADING NEXT SONG');
+									trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
+									FlxTransitionableState.skipNextTransIn = true;
+									FlxTransitionableState.skipNextTransOut = true;
+									prevCamFollow = camFollow;
+
+									PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
+									FlxG.sound.music.stop();
+
+									LoadingState.loadAndSwitchState(new PlayState());
+								}
+						default:
+							{
+								var difficulty:String = "";
+
+								if (storyDifficulty == 0)
+									difficulty = '-easy';
+
+								if (storyDifficulty == 2)
+									difficulty = '-hard';
+
+								trace('LOADING NEXT SONG');
+								trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
+								FlxTransitionableState.skipNextTransIn = true;
+								FlxTransitionableState.skipNextTransOut = true;
+								prevCamFollow = camFollow;
+
+								PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
+								FlxG.sound.music.stop();
+
+								LoadingState.loadAndSwitchState(new PlayState());
+							}
+							
 						// default:
 						// 	FlxG.sound.playMusic(Paths.music('freakyMenu'));
 

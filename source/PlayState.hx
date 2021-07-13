@@ -462,6 +462,7 @@ class PlayState extends MusicBeatState
 					fireBG.antialiasing = true;
 					fireBG.scrollFactor.set(0.89, 0.89);
 					fireBG.active = true;
+					fireBG.animation.play('idle');
 					add(fireBG);
 
 					var floorBG:FlxSprite = new FlxSprite(-823.15, 462.35).loadGraphic(Paths.image('MadWayBg/floor', 'way'));
@@ -2619,31 +2620,30 @@ class PlayState extends MusicBeatState
 
 				storyPlaylist.remove(storyPlaylist[0]);
 
+				var difficulty:String = "";
+
+				if (storyDifficulty == 0)
+					difficulty = '-easy';
+
+				if (storyDifficulty == 2)
+					difficulty = '-hard';
+				trace('LOADING NEXT SONG');
+				trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
+				prevCamFollow = camFollow;
+
+				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
+				FlxG.sound.music.stop();
+
+				LoadingState.loadAndSwitchState(new PlayState());
 				switch (curSong)
 					{
 						case 'always':
 							if (accuracy <= 60)
 								FlxG.switchState(new EndingState());
 							else
-								{
-									var difficulty:String = "";
-
-									if (storyDifficulty == 0)
-										difficulty = '-easy';
-
-									if (storyDifficulty == 2)
-										difficulty = '-hard';
-									trace('LOADING NEXT SONG');
-									trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
-									FlxTransitionableState.skipNextTransIn = true;
-									FlxTransitionableState.skipNextTransOut = true;
-									prevCamFollow = camFollow;
-
-									PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
-									FlxG.sound.music.stop();
-
-									LoadingState.loadAndSwitchState(new PlayState());
-								}
+								LoadingState.loadAndSwitchState(new VideoState("assets/videos/noway/vid.webm", new PlayState()));
 						case 'sussy':
 							FlxG.switchState(new EndingState3());
 						case 'no-way':

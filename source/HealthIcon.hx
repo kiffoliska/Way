@@ -35,8 +35,8 @@ class HealthIcon extends FlxSprite
 		animation.add('way', [24, 26], 0, false, isPlayer);
 		animation.add('way-angy', [25, 26], 0, false, isPlayer);
 		animation.add('way-mad', [27, 27], 0, false, isPlayer);
-		animation.add('expurgation', [27, 27], 0, false, isPlayer);
-		animation.add('way-dead', [32, 32], 0, false, isPlayer);
+		animation.add('expurgation', [32, 32], 0, false, isPlayer);
+		animation.add('way-dead', [36, 36], 0, false, isPlayer);
 		animation.add('bf-old', [14, 15], 0, false, isPlayer);
 		animation.add('gf', [16], 0, false, isPlayer);
 		animation.add('gf-christmas', [16], 0, false, isPlayer);
@@ -45,6 +45,10 @@ class HealthIcon extends FlxSprite
 		animation.add('parents-christmas', [17, 18], 0, false, isPlayer);
 		animation.add('monster', [19, 20], 0, false, isPlayer);
 		animation.add('monster-christmas', [19, 20], 0, false, isPlayer);
+		animation.add('jads', [33, 33], 0, false, isPlayer);
+		animation.add('atsuover', [34, 34], 0, false, isPlayer);
+		animation.add('mike', [35, 35], 0, false, isPlayer);
+		animation.add('crewmate', [30, 31], 0, false, isPlayer);
 		animation.play(char);
 
 		switch(char)

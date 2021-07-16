@@ -471,6 +471,35 @@ class PlayState extends MusicBeatState
 					floorBG.active = false;
 					add(floorBG);
 			}
+			case 'skeld':
+			{
+				curStage = 'skeld';
+				defaultCamZoom = 0.9;
+
+				var skeldBG:FlxSprite = new FlxSprite(-496.1, -280.05).loadGraphic(Paths.image('skeld/bg', 'way'));
+				skeldBG.updateHitbox();
+				skeldBG.antialiasing = true;
+				skeldBG.scrollFactor.set(0, 0);
+				add(skeldBG);
+
+				var skeldITSELF:FlxSprite = new FlxSprite(-403.1, 150.25).loadGraphic(Paths.image('skeld/skeld', 'way'));
+				skeldITSELF.updateHitbox();
+				skeldITSELF.antialiasing = true;
+				skeldITSELF.scrollFactor.set(0.67, 0.67);
+				add(skeldITSELF);
+
+				var skeldBACK:FlxSprite = new FlxSprite(370.75, 310.6).loadGraphic(Paths.image('skeld/back', 'way'));
+				skeldBACK.updateHitbox();
+				skeldBACK.antialiasing = true;
+				skeldBACK.scrollFactor.set(0.7, 0.7);
+				add(skeldBACK);
+
+				var skeldFRONT:FlxSprite = new FlxSprite(-470.45, 408.45).loadGraphic(Paths.image('skeld/front', 'way'));
+				skeldFRONT.updateHitbox();
+				skeldFRONT.antialiasing = true;
+				skeldFRONT.scrollFactor.set(0.8, 0.8);
+				add(skeldFRONT);
+			}
 			case 'limo':
 			{
 					curStage = 'limo';
@@ -849,14 +878,14 @@ class PlayState extends MusicBeatState
 			case 'MadWayBg':
 				dad.x = -472.3;
 				dad.y = -40.9;
-				if (isStoryMode)
-					{
-						camPos.x += 70;
-						tweenCamIn();
-					}
+				camPos.x += 70;
+				tweenCamIn();
 			case 'sussyBg':
 				dad.x = 126;
 				dad.y = 823;
+			case 'skeld':
+				dad.x = 97.25;
+				dad.y = 401.05;
 		}
 
 
@@ -902,6 +931,15 @@ class PlayState extends MusicBeatState
 				boyfriend.y = 559;
 				gf.x = 564.45;
 				gf.y = 274.35;
+			case 'skeld':
+				dad.x = 97.25;
+				dad.y = 401.05;
+
+				boyfriend.x = 800.55;
+				boyfriend.y = 325.8;
+
+				gf.x = 290.7;
+				gf.y = 41.9;
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;

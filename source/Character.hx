@@ -650,7 +650,7 @@ class Character extends FlxSprite
 				frames = Paths.getSparrowAtlas('characters/dedway');
 				animation.addByPrefix('idle', 'dedway', 24, false);
 
-				addOffset('idle', 0, -703);
+				addOffset('idle', 0, 0);
 
 				playAnim('idle');
 
@@ -667,6 +667,21 @@ class Character extends FlxSprite
 				addOffset("singRIGHT", -339, -261);
 				addOffset("singLEFT", 342, 5);
 				addOffset("singDOWN", -31, -553);
+
+				playAnim('idle');
+			case 'crewmate':
+				frames = Paths.getSparrowAtlas('characters/crewmate');
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+
+				addOffset('idle', 0, 0);
+				addOffset("singUP", 12, 24);
+				addOffset("singRIGHT", -3, 0);
+				addOffset("singLEFT", 18, 0);
+				addOffset("singDOWN", -5, -9);
 
 				playAnim('idle');
 		}

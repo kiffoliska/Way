@@ -412,6 +412,7 @@ class PlayState extends MusicBeatState
 					add(street);
 			}
 			case 'wayBg':
+				{
 					curStage = 'wayBg';
 					defaultCamZoom = 0.78;
 
@@ -435,8 +436,9 @@ class PlayState extends MusicBeatState
 					flor.active = false;
 					flor.updateHitbox();
 					add(flor);
-
+				}
 			case 'sussyBg':
+				{
 					curStage = 'sussyBg';
 
 					var bg:FlxSprite = new FlxSprite( -317.8, -274.85).loadGraphic(Paths.image('sussyBg/sussyBg', 'way'));
@@ -444,6 +446,7 @@ class PlayState extends MusicBeatState
 					bg.scrollFactor.set(0.2, 0.2);
 					bg.active = false;
 					add(bg);
+				}
 			case 'MadWayBg':
 			{
 					curStage = 'MadWayBg';
@@ -994,14 +997,14 @@ class PlayState extends MusicBeatState
 			{
 				var bottom:FlxSprite = new FlxSprite( -660.6, 626.45).loadGraphic(Paths.image('wayBg/waybottom', 'way'));
 				bottom.antialiasing = true;
-				bottom.scrollFactor.set(0.9, 0.9);
+				bottom.scrollFactor.set(0.3, 0.2);
 				bottom.active = false;
 				bottom.updateHitbox();
 				add(bottom);
 
 				var top:FlxSprite = new FlxSprite( -410.15, -199.55).loadGraphic(Paths.image('wayBg/waytop', 'way'));
 				top.antialiasing = true;
-				top.scrollFactor.set(0.8, 0.8);
+				top.scrollFactor.set(0.3, 0.2);
 				top.active = false;
 				top.updateHitbox();
 				add(top);
@@ -2681,9 +2684,12 @@ class PlayState extends MusicBeatState
 							if (accuracy <= 60)
 								FlxG.switchState(new EndingState());
 							else
-								LoadingState.loadAndSwitchState(new VideoState("assets/videos/noway/vid.webm", new PlayState()));
+								LoadingState.loadAndSwitchState(new VideoState("assets/videos/cutscene2.webm", new PlayState(), 647));
 						case 'sussy':
-							FlxG.switchState(new EndingState3());
+							if (accuracy >= 60)
+								FlxG.switchState(new EndingState3());
+							else
+								FlxG.switchState(new FreeplayState());
 						case 'no-way':
 							if (accuracy <= 85)
 								FlxG.switchState(new EndingState2());
@@ -2707,46 +2713,25 @@ class PlayState extends MusicBeatState
 
 									LoadingState.loadAndSwitchState(new PlayState());
 								}
-						default:
-							{
-								var difficulty:String = "";
-
-								if (storyDifficulty == 0)
-									difficulty = '-easy';
-
-								if (storyDifficulty == 2)
-									difficulty = '-hard';
-
-								trace('LOADING NEXT SONG');
-								trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
-								FlxTransitionableState.skipNextTransIn = true;
-								FlxTransitionableState.skipNextTransOut = true;
-								prevCamFollow = camFollow;
-
-								PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
-								FlxG.sound.music.stop();
-
-								LoadingState.loadAndSwitchState(new PlayState());
-							}
 							
-						// default:
-						// 	FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						default:
+							// FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
-						// 	transIn = FlxTransitionableState.defaultTransIn;
-						// 	transOut = FlxTransitionableState.defaultTransOut;
+							// transIn = FlxTransitionableState.defaultTransIn;
+							// transOut = FlxTransitionableState.defaultTransOut;
 
-						// 	FlxG.switchState(new StoryMenuState());
+							// FlxG.switchState(new StoryMenuState());
 
-						// 	#if windows
-						// 	if (luaModchart != null)
-						// 	{
-						// 		luaModchart.die();
-						// 		luaModchart = null;
-						// 	}
-						// 	#end
+							// #if windows
+							// if (luaModchart != null)
+							// {
+							// 	luaModchart.die();
+							// 	luaModchart = null;
+							// }
+							// #end
 
-						// 	// if ()
-						// 	StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
+							// // if ()
+							StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
 					}
 				if (storyPlaylist.length <= 0)
 				{

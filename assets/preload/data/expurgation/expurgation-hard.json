@@ -3485,6 +3485,7 @@
     "validScore": true,
     "sections": 0,
     "needsVoices": true,
+    "stage": "MadWayBg",
     "speed": 3,
     "bpm": 230
   }
